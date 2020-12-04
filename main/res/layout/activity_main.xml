@@ -1,0 +1,63 @@
+<!--一个垂直LinearLayout组件-->
+<!--    id=”@+id/xx”，存在于.xml布局文件中，是为该控件生成一个ID，其名"xx"，在后面引用该控件时以“R.id.xx”的形式引用。-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+<!--    orientation:方向属性-->
+    <TextView
+        android:id="@+id/question_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:text="@string/Question"
+        />
+<!--一个TextView组件    -->
+
+<!--    一个水平LinearLayout组件-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+<!--        text属性：TextView与Button组件具有text属性，该属性指定组件要显示的文字内容-->
+<!--        注意：text属性不是字符串值，而是对字符串资源的引用-->
+<!--        字符串资源饱汉子啊一个独立的名为XML的文件中，虽然可以硬编码设置组件的文本属性值，但最好还是-->
+<!--        将文字内容放置在独立的字符串资源XML文件中，然后引用他们，这样也便于对应用进行本地化-->
+<!--        每个项目都包含一个名为strings.xml的默认字符串文件，目录为 app/res/values-->
+
+<!--        为按钮添加资源id：text="@string/true_button"-->
+        <Button
+            android:id="@+id/true_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/true_button" />
+<!--        wrap_content:视图将根据其展示的内容自动调整大小-->
+<!--        match_parent:视图与其父视图大小相同-->
+        <Button
+            android:id="@+id/false_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/false_button" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_left"
+            android:drawablePadding="46dp"
+            />
+        <ImageButton
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right"
+            android:drawablePadding="46dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>
